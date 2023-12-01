@@ -17,3 +17,5 @@ const ExerciseSchema = new mongoose.Schema({
         default: Date.now,
     },
 });
+
+module.exports = Exercise = mongoose.model('exercise', ExerciseSchema);
