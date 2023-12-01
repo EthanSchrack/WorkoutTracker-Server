@@ -1,18 +1,18 @@
 const mongoose = require('mongoose');
 
 const ExerciseSchema = new mongoose.Schema({
-    title: {
+    name: {
         type: String,
         required: true,
     },
-    meal: {
-        type: String,
+    workout: {
+        type:String,
     },
     calories: {
-        type: Number,
+        type:Number,
         required: true,
     },
-    updated_date: {
+    updated_Date: {
         type: Date,
         default: Date.now,
     },
