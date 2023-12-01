@@ -1,21 +1,21 @@
 const mongoose = require('mongoose');
 
-const WorkoutSchema = new mongoose.Schema({
-    name: {
+const FoodSchema = new mongoose.Schema({
+    title: {
         type: String,
         required: true,
     },
-    workout: {
-        type:String,
+    meal: {
+        type: String,
     },
     calories: {
-        type:Number,
+        type: Number,
         required: true,
     },
-    updated_Date: {
+    updated_date: {
         type: Date,
         default: Date.now,
     },
 });
 
-module.exports = Workout = mongoose.model('workout', WorkoutSchema);
+module.exports = Food = mongoose.model('food', FoodSchema);
