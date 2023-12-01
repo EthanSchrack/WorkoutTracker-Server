@@ -16,7 +16,12 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true,
         minLength: 8,
-    },
+    }
+    // confirmPassword: {
+    //     type: String,
+    //     required: true,
+    //     minLength: 8,
+    // }
 });
 
 module.exports = User = mongoose.model('user', UserSchema);

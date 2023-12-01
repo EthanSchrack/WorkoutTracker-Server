@@ -16,7 +16,7 @@ router.get('/', auth, async (req, res) => {
 // sign up route
 router.post('/signup', async (req,res) => {
     try {
-        const { email, password, confirmPassword, username } = req.body;
+        const { email, username, password, confirmPassword } = req.body;
         if (!email || !password || !username || !confirmPassword) {
             return res.status(400).json({msg: "Please enter all the fields" });
         }
@@ -38,7 +38,7 @@ router.post('/signup', async (req,res) => {
         const newUser = new User({ email, password: hashedPassword, username });
 
         const savedUser = await newUser.save();
-        console.log(savedUser.username);
+        // console.log(savedUser.username);
         res.json(savedUser);
     } catch (err) {
         res.status(500).json({ error: err.message });
