@@ -14,7 +14,7 @@ router.get('/', auth, async (req, res) => {
 });
 
 // sign up route
-router.post('/signup', async (req,res) => {
+router.post("/signup", async (req,res) => {
     try {
         const { email, username, password, confirmPassword } = req.body;
         if (!email || !password || !username || !confirmPassword) {
