@@ -12,6 +12,9 @@ const ExerciseSchema = new mongoose.Schema({
         type:Number,
         required: true,
     },
+    img: {
+        type: String,
+    },
     updated_Date: {
         type: Date,
         default: Date.now,
