@@ -12,6 +12,9 @@ const FoodSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
+    img: {
+        type: String,
+    },
     updated_date: {
         type: Date,
         default: Date.now,
